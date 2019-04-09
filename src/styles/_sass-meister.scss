@@ -1,0 +1,42 @@
+
+// ----
+// libsass (v3.3.2)
+// ----
+
+$spacer: 1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+
+$spacers: ();
+
+@for $i from 0 through 6 {
+  $spacers: map-merge($spacers, (
+    $i: (
+      x: $spacer-x * $i,
+      y: $spacer-y * $i
+    )
+  )) 
+}
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $lengths in $spacers {
+    $length-x:   map-get($lengths, x);
+    $length-y:   map-get($lengths, y);
+
+    .#{$abbrev}a-#{$size} { #{$prop}:        $length-y $length-x; } // a = All sides
+    .#{$abbrev}t-#{$size} { #{$prop}-top:    $length-y; }
+    .#{$abbrev}r-#{$size} { #{$prop}-right:  $length-x; }
+    .#{$abbrev}b-#{$size} { #{$prop}-bottom: $length-y; }
+    .#{$abbrev}l-#{$size} { #{$prop}-left:   $length-x; }
+
+    // Axes
+    .#{$abbrev}-x-#{$size} {
+      #{$prop}-right:  $length-x;
+      #{$prop}-left:   $length-x;
+    }
+    .#{$abbrev}-y-#{$size} {
+      #{$prop}-top:    $length-y;
+      #{$prop}-bottom: $length-y;
+    }
+  }
+}

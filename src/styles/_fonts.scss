@@ -1,0 +1,52 @@
+  // All of this is connected to the font of the page
+  p, a, h1, h2, h3,h4, h5, ul, li, span, b, i {
+    font-family: $font-stack;
+    color: #4a536b;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    font-weight: 300;
+  }
+
+  .light {
+    font-weight: 300;
+  }
+
+  .semi-bold {
+    font-weight: 600;
+  }
+
+  .bold {
+    font-weight: 700;
+  }
+
+  .black {
+    font-weight: 900;
+  }
+
+
+  
