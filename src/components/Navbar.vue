@@ -1,9 +1,9 @@
 <template>
-  <nav>
+  <nav class="ma-1 mb-5">
     <!-- logo -->
     <div class="logo__wrapper">
       <LogoKokkos size="lg" class="mr-1"/>
-      <h3>kokkos</h3>
+      <h2>kokkos</h2>
     </div>
 
     <!-- liste med linker -->
@@ -35,6 +35,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1050px;
 
   .links {
     list-style-type: none;
@@ -46,6 +48,7 @@ nav {
     }
   }
 }
+
 .logo {
   &__wrapper {
     display: flex;
