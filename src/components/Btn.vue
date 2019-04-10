@@ -48,7 +48,7 @@ export default {
   &__text {
     margin: 0;
     font-size: 16px;
-    color: $color-text-0;
+    color: #262936;
     padding: 13px 30px 13px 30px;
   }
 }
