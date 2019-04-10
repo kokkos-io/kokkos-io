@@ -1,5 +1,5 @@
 <template>
-  <section class="hero mt-3 ml-9">
+  <section class="hero mt-3 ml-3">
     <!-- smart websites, made easy -->
     <div class="hero__cta mt-2">
       <h1>Pretty good websites</h1>
@@ -22,6 +22,7 @@
       alt="illustration of a web developer lying on the beach, drinking from a coconut and developing a website"
     >
     <!-- random leafs -->
+    <FixedLeaves/>
   </section>
 </template>
 
@@ -77,10 +78,11 @@
 
 <script>
 import hero from "@/assets/hero.svg";
+import FixedLeaves from "@/components/FixedLeaves";
 import Btn from "@/components/Btn";
 
 export default {
-  components: { Btn },
+  components: { Btn, FixedLeaves },
   computed: {
     hero() {
       return hero;

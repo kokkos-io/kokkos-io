@@ -1,8 +1,8 @@
 <template>
-  <nav class="ma-2 mb-9 ml-8">
+  <nav class="ma-2 mb-9 ml-5">
     <!-- logo -->
     <div class="logo__wrapper">
-      <LogoKokkos size="md" class="mr-1"/>
+      <LogoKokkos class="logo__wrapper--kokkos" size="sm"/>
       <h2>kokkos</h2>
     </div>
 
@@ -14,7 +14,7 @@
       <li class="mr-1">
         <Btn color="none-border" buttonText="Contact"/>
       </li>
-      <li class="mr-1">
+      <li class="mr-2">
         <Btn color="secondary" buttonText="Get a Quote"/>
       </li>
     </ul>
@@ -42,6 +42,7 @@ nav {
     list-style-type: none;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -51,6 +52,10 @@ nav {
     align-items: center;
     font-family: $font-stack;
     color: $primary;
+
+    &--kokkos {
+      margin-right: 0.3rem;
+    }
   }
 }
 </style>

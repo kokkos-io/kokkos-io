@@ -21,8 +21,12 @@
   &__img {
     width: 90px;
 
-    &--sm {
+    &--xs {
       width: 40px;
+    }
+
+    &--sm {
+      width: 50px;
     }
 
     &--md {
