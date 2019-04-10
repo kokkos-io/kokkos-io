@@ -25,6 +25,7 @@ export default {
 <style lang="scss">
 .random-leafs {
   position: fixed;
+  z-index: -1;
 
   &__fixed--acacia1 {
     transform: scaleX(-1) rotate(70deg);

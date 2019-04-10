@@ -7,26 +7,22 @@
     </div>
 
     <!-- liste med linker -->
-    <ul class="links">
-      <li class="mr-1">
-        <Btn color="none-border" buttonText="Our work"/>
-      </li>
-      <li class="mr-1">
-        <Btn color="none-border" buttonText="Contact"/>
-      </li>
-      <li class="mr-2">
-        <Btn color="secondary" buttonText="Get a Quote"/>
-      </li>
-    </ul>
+    <div class="links">
+      <BtnNavBar text="no-underline" buttonText="Our work"/>
+
+      <BtnNavBar text="no-underline" buttonText="Contact"/>
+
+      <BtnNavBar text="underline" buttonText="Get a Quote"/>
+    </div>
   </nav>
 </template>
 
 <script>
 import LogoKokkos from "@/components/LogoKokkos";
-import Btn from "@/components/Btn";
+import BtnNavBar from "@/components/BtnNavBar";
 
 export default {
-  components: { LogoKokkos, Btn }
+  components: { LogoKokkos, BtnNavBar }
 };
 </script>
 
@@ -35,14 +31,14 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   max-width: $size-nav-bar;
 
   .links {
-    list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
   }
 }
 

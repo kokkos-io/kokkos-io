@@ -72,6 +72,10 @@
   &__illustration {
     width: 100%;
     max-width: 670px;
+
+    @media (max-width: 760px) {
+      margin-top: 5rem;
+    }
   }
 }
 </style>
