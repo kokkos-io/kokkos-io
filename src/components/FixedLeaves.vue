@@ -24,7 +24,13 @@ export default {
 
 <style lang="scss">
 .random-leafs {
-  position: fixed;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   z-index: -1;
 
   &__fixed--acacia1 {
@@ -39,14 +45,14 @@ export default {
     width: 210px;
     position: fixed;
     top: -100px;
-    left: 690px;
+    right: 35%;
   }
 
   &__fixed--rowan {
     width: 180px;
     position: fixed;
     top: -106px;
-    left: 1215px;
+    right: 5px;
   }
 }
 </style>

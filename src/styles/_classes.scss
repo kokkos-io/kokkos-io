@@ -16,7 +16,7 @@
   border-radius: 3px;
 }
 
-// image-size for logo
+// image-size for logo (LogoKokkos)
 .logo-horizontal {
   &__img {
     width: 90px;
@@ -42,4 +42,16 @@
     }
   }
 }
+// this is styling of the logo (LogoKokkos)
+.logo {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    font-family: $font-stack;
+    color: $primary;
 
+    &--kokkos {
+      margin-right: 0.3rem;
+    }
+  }
+}

@@ -39,18 +39,8 @@ nav {
     justify-content: space-between;
     width: 100%;
     max-width: 500px;
-  }
-}
 
-.logo {
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    font-family: $font-stack;
-    color: $primary;
-
-    &--kokkos {
-      margin-right: 0.3rem;
+    @media (max-width: 760px) {
     }
   }
 }
