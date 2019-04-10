@@ -25,8 +25,6 @@ export default {
 <style lang="scss">
 .random-leafs {
   position: relative;
-  height: 100vh;
-  width: 100vw;
   top: 0;
   bottom: 0;
   right: 0;
