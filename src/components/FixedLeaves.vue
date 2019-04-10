@@ -2,20 +2,21 @@
   <div class="random-leafs">
     <img class="random-leafs__fixed--acacia1" :src="fixedLeafAcacia">
     <img class="random-leafs__fixed--acacia2" :src="fixedLeafAcacia">
+    <img class="random-leafs__fixed--rowan" :src="fixedLeafRowan">
   </div>
 </template>
 
 <script>
 import fixedLeafAcacia from "@/assets/fixedLeafAcacia.svg";
-import fixedLeaf2 from "@/assets/fixedLeaf2.svg";
+import fixedLeafRowan from "@/assets/fixedLeafRowan.svg";
 
 export default {
   computed: {
     fixedLeafAcacia() {
       return fixedLeafAcacia;
     },
-    fixedLeaf2() {
-      return fixedLeaf2;
+    fixedLeafRowan() {
+      return fixedLeafRowan;
     }
   }
 };
@@ -38,6 +39,13 @@ export default {
     position: fixed;
     top: -100px;
     left: 690px;
+  }
+
+  &__fixed--rowan {
+    width: 180px;
+    position: fixed;
+    top: -106px;
+    left: 1215px;
   }
 }
 </style>
