@@ -1,16 +1,15 @@
 <template>
-  <section class="hero mt-3">
+  <section class="hero mt-3 ml-9">
     <!-- smart websites, made easy -->
-    <div class="hero__cta">
-      <h1 class="mb-1">Pretty good websites</h1>
+    <div class="hero__cta mt-2">
+      <h1>Pretty good websites</h1>
       <p
-        class="mb-2"
-      >So called Javascript web apps. It's like a complete application you can visit as a website</p>
-      <div class="hero__buttons mb-1">
+        class="hero__description mt-1"
+      >So called Javascript web apps. It's like a complete application you can visit as a website.</p>
+      <div class="hero__buttons mt-1">
         <Btn color="secondary" buttonText="Get a Quote"/>
-        <Btn color="none" buttonText="Apply now"/>
       </div>
-      <p class="join-our-team mb-2">
+      <p class="join-our-team mt-1">
         Want to work remotely?
         <span>Join our team</span>
       </p>
@@ -42,6 +41,10 @@
     width: 100%;
     max-width: 400px;
 
+    h1 {
+      line-height: 1.2;
+    }
+
     .join-our-team {
       span {
         font-weight: 600;
@@ -50,14 +53,24 @@
     }
   }
 
+  &__description {
+    max-width: $size-description-tags;
+  }
+
   &__buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    .btn {
+      &__secondary {
+        width: 100%;
+      }
+    }
   }
 
   &__illustration {
     width: 100%;
-    max-width: 770px;
+    max-width: 670px;
   }
 }
 </style>

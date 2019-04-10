@@ -26,10 +26,10 @@ export default {
   justify-content: center;
   align-items: center;
 
-  border-radius: 25px;
+  border-radius: 30px;
   background: $secondary;
   border: 0;
-  margin: 10px;
+
   border: 3px solid $secondary;
 
   &__secondary {
@@ -49,7 +49,7 @@ export default {
     margin: 0;
     font-size: 16px;
     color: #262936;
-    padding: 13px 30px 13px 30px;
+    padding: 10px 35px 10px 35px;
   }
 }
 </style>
