@@ -1,5 +1,5 @@
 <template>
-  <nav class="ma-2 mb-9 ml-5">
+  <nav class="ma-2 mb-10 ml-5">
     <!-- logo -->
     <div class="logo__wrapper">
       <LogoKokkos class="logo__wrapper--kokkos" size="sm"/>
@@ -8,11 +8,11 @@
 
     <!-- liste med linker -->
     <div class="links">
-      <BtnNavBar text="no-underline" buttonText="Our work"/>
+      <BtnNavBar text="Our work" class="our-work"/>
 
-      <BtnNavBar text="no-underline" buttonText="Contact"/>
+      <BtnNavBar text="Contact" class="contact"/>
 
-      <BtnNavBar text="underline" buttonText="Get a Quote"/>
+      <BtnNavBar text="Get a Quote" class="get-a-quote"/>
     </div>
   </nav>
 </template>
@@ -40,7 +40,7 @@ nav {
     width: 100%;
     max-width: 500px;
 
-    @media (max-width: 760px) {
+    @media (max-width: $mobile) {
     }
   }
 }

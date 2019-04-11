@@ -1,12 +1,12 @@
 <template>
   <button class="btn-nav-bar">
-    <p :class="buttonNavBarTextClasses">{{buttonText}}</p>
+    <p :class="buttonNavBarTextClasses">{{text}}</p>
   </button>
 </template>
 
 <script>
 export default {
-  props: ["text", "buttonText"],
+  props: ["text"],
 
   computed: {
     buttonNavBarTextClasses() {
@@ -32,14 +32,11 @@ export default {
     margin: 0;
     font-size: 16px;
     color: $primary;
-    padding: 10px 35px 10px 35px;
   }
 
   &__underline {
     margin: 0;
-    font-size: 16px;
     color: $primary;
-    padding: 10px 35px 10px 35px;
     border-bottom: 2px solid $primary;
   }
 }

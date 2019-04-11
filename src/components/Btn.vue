@@ -47,9 +47,8 @@ export default {
 
   &__text {
     margin: 0;
-    font-size: 16px;
     color: #262936;
-    padding: 10px 35px 10px 35px;
+    padding: 10px 35px;
   }
 }
 </style>
