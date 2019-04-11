@@ -9,9 +9,7 @@
     <!-- liste med linker -->
     <div class="links">
       <BtnNavBar text="Our work" class="our-work"/>
-
       <BtnNavBar text="Contact" class="contact"/>
-
       <BtnNavBar text="Get a Quote" class="get-a-quote"/>
     </div>
   </nav>
@@ -39,9 +37,6 @@ nav {
     justify-content: space-between;
     width: 100%;
     max-width: 500px;
-
-    @media (max-width: $mobile) {
-    }
   }
 }
 </style>

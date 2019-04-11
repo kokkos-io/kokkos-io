@@ -31,13 +31,13 @@ export default {
   &__no-underline {
     margin: 0;
     font-size: 16px;
-    color: $primary;
+    color: $color-primary;
   }
 
   &__underline {
     margin: 0;
-    color: $primary;
-    border-bottom: 2px solid $primary;
+    color: $color-primary;
+    border-bottom: 2px solid $color-primary;
   }
 }
 </style>

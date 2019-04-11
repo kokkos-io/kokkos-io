@@ -27,13 +27,13 @@ export default {
   align-items: center;
 
   border-radius: 30px;
-  background: $secondary;
+  background: $color-secondary;
   border: 0;
 
-  border: 3px solid $secondary;
+  border: 3px solid $color-secondary;
 
   &__secondary {
-    background: $secondary;
+    background: $color-secondary;
   }
 
   &__none {

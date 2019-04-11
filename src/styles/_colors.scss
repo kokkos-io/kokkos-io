@@ -8,11 +8,11 @@
   border: 1px solid $color-text-0;
 
   &__primary {
-    border-color: $primary;
+    border-color: $color-primary;
   }
 
   &__secondary {
-    border-color: $secondary;
+    border-color: $color-secondary;
   }
 
 }

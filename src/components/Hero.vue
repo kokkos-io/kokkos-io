@@ -53,7 +53,7 @@
     .join-our-team {
       span {
         font-weight: 600;
-        border-bottom: 2px solid $primary;
+        border-bottom: 2px solid $color-primary;
       }
     }
   }
