@@ -37,6 +37,10 @@ nav {
     justify-content: space-between;
     width: 100%;
     max-width: 500px;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }
 </style>
