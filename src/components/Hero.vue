@@ -77,6 +77,13 @@
     width: 100%;
     max-width: 670px;
   }
+
+  .leaf {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+    
+  }
 }
 </style>
 
