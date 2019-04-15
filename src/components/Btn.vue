@@ -26,14 +26,14 @@ export default {
   justify-content: center;
   align-items: center;
 
-  border-radius: 25px;
-  background: $secondary;
+  border-radius: 30px;
+  background: $color-secondary;
   border: 0;
-  margin: 10px;
-  border: 3px solid $secondary;
+
+  border: 3px solid $color-secondary;
 
   &__secondary {
-    background: $secondary;
+    background: $color-secondary;
   }
 
   &__none {
@@ -47,9 +47,8 @@ export default {
 
   &__text {
     margin: 0;
-    font-size: 16px;
     color: #262936;
-    padding: 13px 30px 13px 30px;
+    padding: 10px 35px;
   }
 }
 </style>

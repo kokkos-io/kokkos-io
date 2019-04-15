@@ -1,32 +1,28 @@
 <template>
-  <nav class="ma-1 mb-5">
+  <nav class="ma-2 mb-10">
     <!-- logo -->
-    <div class="logo__wrapper">
-      <LogoKokkos size="lg" class="mr-1"/>
+    <div class="logo__wrapper ml-5">
+      <LogoKokkos class="logo__wrapper--kokkos" size="sm"/>
       <h2>kokkos</h2>
     </div>
 
     <!-- liste med linker -->
-    <ul class="links">
-      <li>
-        <Btn color="none-border" buttonText="Our work"/>
-      </li>
-      <li>
-        <Btn color="none-border" buttonText="Contact"/>
-      </li>
-      <li>
-        <Btn color="secondary" buttonText="Get a Quote"/>
-      </li>
-    </ul>
+    <div class="links">
+      <BtnNavBar text="Our work" class="our-work ml-2"/>
+      <BtnNavBar text="Contact" class="contact"/>
+      <BtnNavBar text="Get a Quote" class="get-a-quote mr-2"/>
+    </div>
+    <HamburgerNavbar class="hamburger-navbar"/>
   </nav>
 </template>
 
 <script>
 import LogoKokkos from "@/components/LogoKokkos";
-import Btn from "@/components/Btn";
+import BtnNavBar from "@/components/BtnNavBar";
+import HamburgerNavbar from "@/components/HamburgerNavbar";
 
 export default {
-  components: { LogoKokkos, Btn }
+  components: { LogoKokkos, BtnNavBar, HamburgerNavbar }
 };
 </script>
 
@@ -35,26 +31,38 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1050px;
+  max-width: $size-nav-bar;
+
+  .logo__wrapper {
+    @media (max-width: $mobile) {
+      margin-left: 0;
+    }
+
+    h2 {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
 
   .links {
-    list-style-type: none;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
 
-    li {
-      margin-right: 1rem;
+    @media (max-width: $mobile) {
+      display: none;
     }
   }
 }
 
-.logo {
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    font-family: $font-stack;
-    color: $primary;
+.hamburger-navbar {
+  display: none;
+
+  @media (max-width: $mobile) {
+    display: block;
   }
 }
 </style>

@@ -3,9 +3,9 @@
 @import url("https://use.typekit.net/tee1sze.css"); // font weight 300, 600, 700, 900
 
 // colors: identity
-$primary: #4a536b;
-$secondary: #ff998c;
-$lightcontrast: #e4f2f5;
+$color-primary: #4a536b;
+$color-secondary: #ff998c;
+$color-lightcontrast: #e4f2f5;
 
 // colors: common
 $color-text-0: #222222;
@@ -15,5 +15,18 @@ $color-text-3: #4a4a4a;
 
 // fonts
 $font-stack: sofia-pro, sans-serif;
+$font-size-a: 18px;
+$font-size-b: 20px;
+$font-size-c: 36px;
+$font-size-d: 60px;
 
+
+// sizes: misc
+$size-nav-bar: 1250px;
+$size-description-tags: 300px;
+
+// sizes: media queries
+$mobile: 760px;
+$desktop: 1024px;
+$desktop-xl: 1900px;
 

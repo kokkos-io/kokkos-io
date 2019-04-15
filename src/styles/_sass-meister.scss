@@ -9,7 +9,7 @@ $spacer-y: $spacer;
 
 $spacers: ();
 
-@for $i from 0 through 6 {
+@for $i from 0 through 10 {
   $spacers: map-merge($spacers, (
     $i: (
       x: $spacer-x * $i,
