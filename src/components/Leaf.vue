@@ -42,7 +42,7 @@ export default {
     width: 210px;
     position: fixed;
     top: -100px;
-    right: 35%;
+    right: 40%;
   }
 
   &__rowan {

@@ -82,7 +82,6 @@
     @media (max-width: $mobile) {
       display: none;
     }
-    
   }
 }
 </style>
