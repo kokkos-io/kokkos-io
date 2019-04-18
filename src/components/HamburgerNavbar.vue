@@ -1,11 +1,11 @@
 <template>
   <div class="dropdown mr-1">
-    <div class="dropdown__hamburger-nav">
-      <div class="first"></div>
-      <div class="second"></div>
-      <div class="third"></div>
+    <div @click="menuIsOpen = !menuIsOpen" class="dropdown__hamburger-nav">
+      <div :class="menuIsOpen ? 'first--open' : 'first'"></div>
+      <div :class="menuIsOpen ? 'second--open' : 'second'"></div>
+      <div :class="menuIsOpen ? 'third--open' : 'third'"></div>
     </div>
-    <div class="dropdown__content">
+    <div :class="menuIsOpen ? 'dropdown__content' : 'dropdown__content--hidden'">
       <div class="dropdown__content--links ma-1">
         <a href="#">Our work</a>
         <a href="#">Get a quote</a>
@@ -27,46 +27,19 @@
   </div>
 </template>
 
-<script>
-import LogoKokkos from "@/components/LogoKokkos";
-export default {
-  components: { LogoKokkos }
-};
-</script>
 
 <style lang="scss">
 .dropdown {
   width: 55px;
-  transform: translate(-50% -50%);
+  //transform: translate(-50% -50%);
   cursor: pointer;
-
-  &:hover &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &:hover .first {
-    transform: translateY(10px) rotate(45deg);
-    transition: all 0.5s ease;
-  }
-
-  &:hover .second {
-    opacity: 0;
-    transition: all 0.2s ease;
-  }
-
-  &:hover .third {
-    transform: translateY(-10px) rotate(-45deg);
-    transition: all 0.5s ease;
-  }
 
   &__hamburger-nav {
     width: 30px;
     height: 30px;
     position: relative;
     z-index: 2;
+    padding: 15px;
 
     div {
       height: 4px;
@@ -79,21 +52,39 @@ export default {
     .first {
       top: 0px;
       left: 20px;
+
+      &--open {
+        transform: rotate(45deg);
+        transition: all 0.5s ease;
+      }
     }
 
     .second {
       top: 10px;
       left: 20px;
+
+      &--open {
+        opacity: 0;
+        transition: all 0.2s ease;
+      }
     }
 
     .third {
       top: 20px;
       left: 20px;
+
+      &--open {
+        transform: rotate(-45deg);
+        transition: all 0.5s ease;
+      }
     }
   }
 
   &__content {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     min-width: 260px;
     width: 100%;
@@ -103,6 +94,10 @@ export default {
     left: 0;
     top: 0;
     background: white;
+
+    &--hidden {
+      display: none;
+    }
 
     &--links {
       margin-top: 70px;
@@ -158,3 +153,16 @@ export default {
   }
 }
 </style>
+
+<script>
+import LogoKokkos from "@/components/LogoKokkos";
+export default {
+  components: { LogoKokkos },
+
+  data() {
+    return {
+      menuIsOpen: false
+    };
+  }
+};
+</script>
