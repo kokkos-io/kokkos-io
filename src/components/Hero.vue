@@ -1,5 +1,5 @@
 <template>
-  <section class="hero ml-3">
+  <section class="hero">
     <!-- smart websites, made easy -->
     <div class="hero__cta">
       <h1 class="mb-1">Pretty good websites</h1>
@@ -31,11 +31,13 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin: 3rem;
 
   @media (max-width: $mobile) {
     flex-direction: column;
     justify-content: center;
     align-items: space-between;
+    margin: 1rem;
   }
 
   &__cta {
@@ -54,6 +56,7 @@
       span {
         font-weight: 600;
         border-bottom: 2px solid $color-primary;
+        cursor: pointer;
       }
     }
   }
