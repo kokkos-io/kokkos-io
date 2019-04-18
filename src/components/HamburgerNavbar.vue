@@ -1,5 +1,5 @@
 <template>
-  <div class="dropdown mr-1">
+  <div class="dropdown">
     <div @click="menuIsOpen = !menuIsOpen" class="dropdown__hamburger-nav">
       <div :class="menuIsOpen ? 'first--open' : 'first'"></div>
       <div :class="menuIsOpen ? 'second--open' : 'second'"></div>
@@ -30,16 +30,15 @@
 
 <style lang="scss">
 .dropdown {
-  width: 55px;
-  //transform: translate(-50% -50%);
+  width: 45px;
+  transform: translate(-50% -50%);
   cursor: pointer;
 
   &__hamburger-nav {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     position: relative;
     z-index: 2;
-    padding: 15px;
 
     div {
       height: 4px;
@@ -50,18 +49,18 @@
     }
 
     .first {
-      top: 0px;
-      left: 20px;
+      top: 5px;
+      left: 15px;
 
       &--open {
-        transform: rotate(45deg);
+        transform: translateX(20px) translateY(15px) rotate(45deg);
         transition: all 0.5s ease;
       }
     }
 
     .second {
-      top: 10px;
-      left: 20px;
+      top: 15px;
+      left: 15px;
 
       &--open {
         opacity: 0;
@@ -70,11 +69,11 @@
     }
 
     .third {
-      top: 20px;
-      left: 20px;
+      top: 25px;
+      left: 15px;
 
       &--open {
-        transform: rotate(-45deg);
+        transform: translateX(20px) translateY(15px) rotate(-45deg);
         transition: all 0.5s ease;
       }
     }
@@ -85,15 +84,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     min-width: 260px;
     width: 100%;
     height: 100%;
     z-index: 1;
-    border: 1px solid black;
     left: 0;
     top: 0;
     background: white;
+    box-sizing: border-box;
 
     &--hidden {
       display: none;

@@ -1,5 +1,5 @@
 <template>
-  <nav class="ma-2 mb-10">
+  <nav class="ma-1 mb-10">
     <!-- logo -->
     <div class="logo__wrapper ml-5">
       <LogoKokkos class="logo__wrapper--kokkos" size="sm"/>
