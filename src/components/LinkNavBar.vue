@@ -1,10 +1,10 @@
 <template>
-  <a href="#" :class="linkNavBarTextClasses">{{text}}</a>
+  <router-link :to="to" :class="linkNavBarTextClasses">{{text}}</router-link>
 </template>
 
 <script>
 export default {
-  props: ["text", "linkStyle"],
+  props: ["text", "linkStyle", "to"],
 
   computed: {
     linkNavBarTextClasses() {
@@ -23,11 +23,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: none;
-  border: 0;
   list-style: none;
   text-decoration: none;
-  width: 150px;
+  max-width: 140px;
+  width: 100%;
 
   &__no-underline {
     margin: 0;
