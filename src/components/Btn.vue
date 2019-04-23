@@ -25,6 +25,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   border-radius: 30px;
   background: $color-secondary;

@@ -1,11 +1,11 @@
 <template>
-  <div class="dropdown mr-1">
-    <div class="dropdown__hamburger-nav">
-      <div class="first"></div>
-      <div class="second"></div>
-      <div class="third"></div>
+  <div class="dropdown">
+    <div @click="menuIsOpen = !menuIsOpen" class="dropdown__hamburger-nav">
+      <div :class="menuIsOpen ? 'first--open' : 'first'"></div>
+      <div :class="menuIsOpen ? 'second--open' : 'second'"></div>
+      <div :class="menuIsOpen ? 'third--open' : 'third'"></div>
     </div>
-    <div class="dropdown__content">
+    <div :class="menuIsOpen ? 'dropdown__content' : 'dropdown__content--hidden'">
       <div class="dropdown__content--links ma-1">
         <a href="#">Our work</a>
         <a href="#">Get a quote</a>
@@ -27,44 +27,16 @@
   </div>
 </template>
 
-<script>
-import LogoKokkos from "@/components/LogoKokkos";
-export default {
-  components: { LogoKokkos }
-};
-</script>
 
 <style lang="scss">
 .dropdown {
-  width: 55px;
+  width: 45px;
   transform: translate(-50% -50%);
   cursor: pointer;
 
-  &:hover &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &:hover .first {
-    transform: translateY(10px) rotate(45deg);
-    transition: all 0.5s ease;
-  }
-
-  &:hover .second {
-    opacity: 0;
-    transition: all 0.2s ease;
-  }
-
-  &:hover .third {
-    transform: translateY(-10px) rotate(-45deg);
-    transition: all 0.5s ease;
-  }
-
   &__hamburger-nav {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     position: relative;
     z-index: 2;
 
@@ -77,32 +49,54 @@ export default {
     }
 
     .first {
-      top: 0px;
-      left: 20px;
+      top: 5px;
+      left: 15px;
+
+      &--open {
+        transform: translateX(20px) translateY(15px) rotate(45deg);
+        transition: all 0.5s ease;
+      }
     }
 
     .second {
-      top: 10px;
-      left: 20px;
+      top: 15px;
+      left: 15px;
+
+      &--open {
+        opacity: 0;
+        transition: all 0.2s ease;
+      }
     }
 
     .third {
-      top: 20px;
-      left: 20px;
+      top: 25px;
+      left: 15px;
+
+      &--open {
+        transform: translateX(20px) translateY(15px) rotate(-45deg);
+        transition: all 0.5s ease;
+      }
     }
   }
 
   &__content {
-    display: none;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     min-width: 260px;
     width: 100%;
     height: 100%;
     z-index: 1;
-    border: 1px solid black;
     left: 0;
     top: 0;
     background: white;
+    box-sizing: border-box;
+
+    &--hidden {
+      display: none;
+    }
 
     &--links {
       margin-top: 70px;
@@ -158,3 +152,16 @@ export default {
   }
 }
 </style>
+
+<script>
+import LogoKokkos from "@/components/LogoKokkos";
+export default {
+  components: { LogoKokkos },
+
+  data() {
+    return {
+      menuIsOpen: false
+    };
+  }
+};
+</script>
