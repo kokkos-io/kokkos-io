@@ -32,9 +32,10 @@ export default {
     margin: 0;
     color: $color-primary;
     text-decoration: none;
+    transition: font-size 1s;
 
     &:hover {
-      font-size: 20px;
+      font-size: 19px;
     }
   }
 
@@ -42,9 +43,10 @@ export default {
     margin: 0;
     color: $color-primary;
     text-decoration: underline;
+    transition: font-size 1s;
 
     &:hover {
-      font-size: 20px;
+      font-size: 19px;
     }
   }
 }

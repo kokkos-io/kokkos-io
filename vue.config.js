@@ -17,3 +17,10 @@ function addStyleResource(rule) {
       ],
     })
 }
+
+module.exports = {
+  publicPath: "",
+  devServer: {
+    host: "localhost"
+  }
+}

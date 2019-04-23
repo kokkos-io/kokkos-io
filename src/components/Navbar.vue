@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav">
     <!-- logo -->
     <router-link to="/" class="logo__wrapper ml-5">
       <LogoKokkos class="logo__wrapper--kokkos" size="sm"/>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
-nav {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
