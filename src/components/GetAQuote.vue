@@ -5,11 +5,30 @@
       <p>Simply choose the service you need from the list below.</p>
     </div>
     <div class="wrapper">
-      <Icons :image="iconsWebDevelopment" title="Web development" text="Web ready websites"/>
+      <Icons
+        @click.native="showModalDev = true"
+        :image="iconsWebDevelopment"
+        title="Web development"
+        text="Web ready websites"
+      />
+
+      <v-dialog class="show-modal" v-model="showModalDev" max-width="800">
+        <div class="show-modal__window">
+          <div class="show-modal__window--left">
+            <img :src="iconsWebDevelopment">
+          </div>
+          <div class="show-modal__window--right">
+            <h2>Web Development</h2>
+            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
+            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+          </div>
+        </div>
+      </v-dialog>
+
       <Icons
         :image="iconsCMS"
         title="CMS"
-        class="iconCMS"
+        class="icon-CMS"
         text="A custom-made content management system"
       />
       <Icons :image="iconsIntegrations" title="Integrations" text="email / photos / chat ..."/>
@@ -17,18 +36,27 @@
       <Icons
         :image="iconsEverything"
         title="Everything"
-        class="iconEverything"
+        class="icon-everything"
         text="Design, Code, Hosting, Integrations, cms"
       />
       <Icons
-        @click.native="dialog = true"
+        @click.native="showModalDontKnow = true"
         :image="iconsIDontKnow"
         title="I´m not sure"
         text="We´ll help guide you"
       />
 
-      <v-dialog v-model="dialog" max-width="290">
-        <v-card-title class="headline">Hello</v-card-title>
+      <v-dialog class="show-modal" v-model="showModalDontKnow" max-width="800">
+        <div class="show-modal__window">
+          <div class="show-modal__window--left">
+            <img :src="iconsIDontKnow">
+          </div>
+          <div class="show-modal__window--right">
+            <h2>I´m not sure</h2>
+            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
+            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+          </div>
+        </div>
       </v-dialog>
     </div>
     <Leaf/>
@@ -51,7 +79,8 @@ export default {
 
   data() {
     return {
-      dialog: false
+      showModalDev: false,
+      showModalDontKnow: false
     };
   },
 
@@ -104,8 +133,17 @@ export default {
     justify-content: center;
   }
 
-  .iconCMS,
-  .iconEverything {
+  .show-modal {
+    &__window {
+      display: flex;
+      max-height: 800px;
+      background-color: white;
+      font-family: $font-stack;
+    }
+  }
+
+  .icon-CMS,
+  .icon-everything {
     img {
       margin-top: 1rem;
     }
