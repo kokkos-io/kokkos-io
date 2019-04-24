@@ -26,19 +26,87 @@
       </v-dialog>
 
       <Icons
+        @click.native="showModalCMS = true"
         :image="iconsCMS"
         title="CMS"
         class="icon-CMS"
         text="A custom-made content management system"
       />
-      <Icons :image="iconsIntegrations" title="Integrations" text="email / photos / chat ..."/>
-      <Icons :image="iconsWebDesign" title="Web design" text="Beautiful responsive websites"/>
+
+      <v-dialog class="show-modal" v-model="showModalCMS" max-width="800">
+        <div class="show-modal__window">
+          <div class="show-modal__window--left">
+            <img :src="iconsCMS">
+          </div>
+          <div class="show-modal__window--right">
+            <h2>CMS</h2>
+            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
+            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+          </div>
+        </div>
+      </v-dialog>
+
       <Icons
+        @click.native="showModalInteg = true"
+        :image="iconsIntegrations"
+        title="Integrations"
+        text="email / photos / chat ..."
+      />
+
+      <v-dialog class="show-modal" v-model="showModalInteg" max-width="800">
+        <div class="show-modal__window">
+          <div class="show-modal__window--left">
+            <img :src="iconsIntegrations">
+          </div>
+          <div class="show-modal__window--right">
+            <h2>Integrations</h2>
+            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
+            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+          </div>
+        </div>
+      </v-dialog>
+
+      <Icons
+        @click.native="showModalDesign = true"
+        :image="iconsWebDesign"
+        title="Web design"
+        text="Beautiful responsive websites"
+      />
+
+      <v-dialog class="show-modal" v-model="showModalDesign" max-width="800">
+        <div class="show-modal__window">
+          <div class="show-modal__window--left">
+            <img :src="iconsWebDesign">
+          </div>
+          <div class="show-modal__window--right">
+            <h2>Web design</h2>
+            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
+            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+          </div>
+        </div>
+      </v-dialog>
+
+      <Icons
+        @click.native="showModalEver = true"
         :image="iconsEverything"
         title="Everything"
         class="icon-everything"
         text="Design, Code, Hosting, Integrations, cms"
       />
+
+      <v-dialog class="show-modal" v-model="showModalEver" max-width="800">
+        <div class="show-modal__window">
+          <div class="show-modal__window--left">
+            <img :src="iconsEverything">
+          </div>
+          <div class="show-modal__window--right">
+            <h2>Everything</h2>
+            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
+            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+          </div>
+        </div>
+      </v-dialog>
+
       <Icons
         @click.native="showModalDontKnow = true"
         :image="iconsIDontKnow"
@@ -80,6 +148,10 @@ export default {
   data() {
     return {
       showModalDev: false,
+      showModalCMS: false,
+      showModalInteg: false,
+      showModalDesign: false,
+      showModalEver: false,
       showModalDontKnow: false
     };
   },
