@@ -18,9 +18,9 @@
             <img :src="iconsWebDevelopment">
           </div>
           <div class="show-modal__window--right">
-            <h2>Web Development</h2>
-            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
-            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+            <h4>Web Development</h4>
+            <h2>Web ready websites</h2>
+            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
           </div>
         </div>
       </v-dialog>
@@ -39,9 +39,9 @@
             <img :src="iconsCMS">
           </div>
           <div class="show-modal__window--right">
-            <h2>CMS</h2>
-            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
-            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+            <h4>CMS</h4>
+            <h2>A custom-made content management system</h2>
+            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
           </div>
         </div>
       </v-dialog>
@@ -59,9 +59,9 @@
             <img :src="iconsIntegrations">
           </div>
           <div class="show-modal__window--right">
-            <h2>Integrations</h2>
-            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
-            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+            <h4>Integrations</h4>
+            <h2>email / photos / chat ...</h2>
+            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
           </div>
         </div>
       </v-dialog>
@@ -79,9 +79,9 @@
             <img :src="iconsWebDesign">
           </div>
           <div class="show-modal__window--right">
-            <h2>Web design</h2>
-            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
-            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+            <h4>Web design</h4>
+            <h2>Beautiful responsive websites</h2>
+            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
           </div>
         </div>
       </v-dialog>
@@ -100,9 +100,9 @@
             <img :src="iconsEverything">
           </div>
           <div class="show-modal__window--right">
-            <h2>Everything</h2>
-            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
-            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+            <h4>Everything</h4>
+            <h2>Design, code, hosting, integrations, cms</h2>
+            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
           </div>
         </div>
       </v-dialog>
@@ -120,9 +120,9 @@
             <img :src="iconsIDontKnow">
           </div>
           <div class="show-modal__window--right">
-            <h2>I´m not sure</h2>
-            <p>Bleblelbelblablalblalblallblabsdlsfbdflblfsglsd</p>
-            <p>Bgsdgblssfgdfzbfdshdsghldfzgdrglbfzdb</p>
+            <h4>I´m not sure</h4>
+            <h2>We´ll help guide you</h2>
+            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
           </div>
         </div>
       </v-dialog>
@@ -211,6 +211,15 @@ export default {
       max-height: 800px;
       background-color: white;
       font-family: $font-stack;
+
+      &--left {
+        img {
+          padding: 20px;
+        }
+      }
+
+      &--right {
+      }
     }
   }
 
