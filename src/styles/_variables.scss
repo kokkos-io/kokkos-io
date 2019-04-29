@@ -29,3 +29,6 @@ $mobile: 760px;
 $desktop: 1024px;
 $desktop-xl: 1900px;
 
+// margin bottom (needs to be !important to overwrite vuetify)
+$margin-bottom: 1rem!important 
+

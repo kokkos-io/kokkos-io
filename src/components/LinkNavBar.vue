@@ -32,21 +32,23 @@ export default {
     margin: 0;
     color: $color-primary;
     text-decoration: none;
-    transition: font-size 1s;
+    transition: font-size 0.4s;
 
     &:hover {
       font-size: 19px;
+      text-decoration: underline;
     }
   }
 
   &__underline {
     margin: 0;
     color: $color-primary;
-    text-decoration: underline;
-    transition: font-size 1s;
+    transition: font-size 0.4s;
 
     &:hover {
       font-size: 19px;
+      color: $color-secondary;
+      text-decoration: underline;
     }
   }
 }

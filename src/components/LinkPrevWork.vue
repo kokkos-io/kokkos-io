@@ -1,8 +1,8 @@
 <template>
-  <div class="places">
+  <div class="projects">
     <img class="box" :src="image">
-    <h2 class="places__title">{{title}}</h2>
-    <p class="places__text">{{text}}</p>
+    <h2 class="projects__title">{{title}}</h2>
+    <p class="projects__text">{{text}}</p>
   </div>
 </template>
 
@@ -14,11 +14,13 @@ export default {
 
 <style lang="scss">
 .box {
-  width: 550px;
-  height: 350px;
+  max-width: 550px;
+  width: 100%;
+  max-height: 350px;
+  height: 100%;
 }
 
-.places {
+.projects {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -26,5 +28,6 @@ export default {
   height: 100%;
   max-height: 550px;
   margin: 20px;
+  margin-bottom: 100px;
 }
 </style>

@@ -5,6 +5,13 @@
       <p>Simply choose the service you need from the list below.</p>
     </div>
     <div class="wrapper">
+      <!-- <div
+        class="typeform-widget"
+        data-url="https://martine669524.typeform.com/to/IMlE6l"
+        data-transparency="100"
+        style="width: 100%; height: 500px;"
+      ></div>-->
+
       <Icons
         @click.native="showModalDev = true"
         :image="iconsWebDevelopment"
@@ -145,6 +152,10 @@ import Icons from "@/components/Icons.vue";
 export default {
   components: { Leaf, Icons },
 
+  mounted() {
+    this.createTypeform();
+  },
+
   data() {
     return {
       showModalDev: false,
@@ -154,6 +165,28 @@ export default {
       showModalEver: false,
       showModalDontKnow: false
     };
+  },
+
+  methods: {
+    createTypeform() {
+      var qs,
+        js,
+        q,
+        s,
+        d = document,
+        gi = d.getElementById,
+        ce = d.createElement,
+        gt = d.getElementsByTagName,
+        id = "typef_orm",
+        b = "https://embed.typeform.com/";
+      if (!gi.call(d, id)) {
+        js = ce.call(d, "script");
+        js.id = id;
+        js.src = b + "embed.js";
+        q = gt.call(d, "script")[0];
+        q.parentNode.insertBefore(js, q);
+      }
+    }
   },
 
   computed: {

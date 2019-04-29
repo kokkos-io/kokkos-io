@@ -8,28 +8,22 @@
       <LinkPrevWork
         :image="freiaLogo"
         title="Freia"
-        text="blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal"
-      />
-      <LinkPrevWork
-        title="Ruter"
-        text="blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal"
+        text="Lorem ipsum dolor sit amet, aliquid molestie gubergren id eam, qui ne errem nostro volumus, eu numquam complectitur sit. Eam ut esse reprimique, at quo magna dicunt explicari. Utroque efficiendi no pro, possim dissentias an pro. Te putant aliquip elaboraret nec."
       />
       <LinkPrevWork
         title="Netlife"
-        text="blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal"
+        text="Lorem ipsum dolor sit amet, aliquid molestie gubergren id eam, qui ne errem nostro volumus, eu numquam complectitur sit. Eam ut esse reprimique, at quo magna dicunt explicari. Utroque efficiendi no pro, possim dissentias an pro. Te putant aliquip elaboraret nec."
+      />
+      <LinkPrevWork
+        class="ruter"
+        :image="ruterLogo"
+        title="Ruter"
+        text="Lorem ipsum dolor sit amet, aliquid molestie gubergren id eam, qui ne errem nostro volumus, eu numquam complectitur sit. Eam ut esse reprimique, at quo magna dicunt explicari. Utroque efficiendi no pro, possim dissentias an pro. Te putant aliquip elaboraret nec."
       />
       <LinkPrevWork
         :image="gjensidigeLogo"
         title="Gjensidige"
-        text="blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal"
+        text="Lorem ipsum dolor sit amet, aliquid molestie gubergren id eam, qui ne errem nostro volumus, eu numquam complectitur sit. Eam ut esse reprimique, at quo magna dicunt explicari. Utroque efficiendi no pro, possim dissentias an pro. Te putant aliquip elaboraret nec."
       />
     </div>
     <Leaf/>
@@ -41,6 +35,8 @@ import Leaf from "@/components/Leaf";
 import LinkPrevWork from "@/components/LinkPrevWork";
 import gjensidigeLogo from "@/assets/gjensidige_logo.svg";
 import freiaLogo from "@/assets/freia_logo.svg";
+import ruterLogo from "@/assets/ruter-logo.png";
+
 export default {
   components: { Leaf, LinkPrevWork },
   computed: {
@@ -49,6 +45,9 @@ export default {
     },
     freiaLogo() {
       return freiaLogo;
+    },
+    ruterLogo() {
+      return ruterLogo;
     }
   }
 };
@@ -74,6 +73,13 @@ export default {
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
+
+    .ruter {
+      .box {
+        background-color: red;
+        padding: 150px;
+      }
+    }
   }
 }
 </style>

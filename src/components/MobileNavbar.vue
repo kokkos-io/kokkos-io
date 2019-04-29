@@ -1,6 +1,6 @@
 <template>
   <div class="dropdown">
-    <div @click="menuIsOpen = !menuIsOpen" class="dropdown__hamburger-nav">
+    <div @click="menuIsOpen = !menuIsOpen" class="dropdown__mobile-nav">
       <div :class="menuIsOpen ? 'first--open' : 'first'"></div>
       <div :class="menuIsOpen ? 'second--open' : 'second'"></div>
       <div :class="menuIsOpen ? 'third--open' : 'third'"></div>
@@ -34,7 +34,7 @@
   transform: translate(-50% -50%);
   cursor: pointer;
 
-  &__hamburger-nav {
+  &__mobile-nav {
     width: 40px;
     height: 40px;
     position: relative;
@@ -128,6 +128,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-bottom: 20px;
 
         p,
         a {
