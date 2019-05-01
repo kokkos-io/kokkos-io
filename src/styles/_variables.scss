@@ -1,6 +1,6 @@
 /* all commonly, shared styles */
 
-@import url("https://use.typekit.net/tee1sze.css"); // font weight 300, 600, 700, 900
+@import url("https://use.typekit.net/tee1sze.css"); // font weight 300, 500, 600, 700, 900
 
 // colors: identity
 $color-primary: #4a536b;
@@ -19,6 +19,8 @@ $font-size-a: 18px;
 $font-size-b: 20px;
 $font-size-c: 36px;
 $font-size-d: 60px;
+
+$font-size-navcard: 30px;
 
 // sizes: misc
 $size-nav-bar: 1250px;
