@@ -1,26 +1,47 @@
 <template>
   <section class="contact-us">
-    <NavCard header="About" to="/" :image="heroNavigationAbout" text="Who we are and what we do"/>
     <NavCard
-      header="Get A Quote"
+      class="nav-card__about"
+      header="About"
+      to="/"
+      :image="heroNavigationAbout"
+      text="Who we are and what we do"
+    />
+    <NavCard
+      class="nav-card__quote"
+      header="Get a Quote"
       to="/get-a-quote"
       :image="heroNavigationGAQ"
       text="Within 24 hours"
     />
-    <NavCard header="Join Kokkos" to="/" :image="heroNavigationJoin" text="Remote web development"/>
     <NavCard
-      header="Our Work"
+      class="nav-card__join"
+      header="Join Kokkos"
+      to="/"
+      :image="heroNavigationJoin"
+      text="Remote web development"
+    />
+    <NavCard
+      class="nav-card__work"
+      header="Our work"
       to="/our-work"
       :image="heroNavigationWork"
       text="See previous projects"
     />
     <NavCard
+      class="nav-card__kaching"
       header="Ka´Ching"
       to="/"
       :image="heroNavigationKaChing"
       text="Our instant payout++ program"
     />
-    <NavCard header="Chat with us" to="/" :image="heroNavigationChat" text="We are online"/>
+    <NavCard
+      class="nav-card__chat"
+      header="Chat with us"
+      to="/"
+      :image="heroNavigationChat"
+      text="We are online"
+    />
     <Leaf/>
     <Footer/>
   </section>
@@ -68,10 +89,10 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 9rem;
+  padding-bottom: 7rem;
 }
 
 .nav {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 </style>

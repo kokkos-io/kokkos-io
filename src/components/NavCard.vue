@@ -26,36 +26,42 @@ $nav-card-height: 260px;
   text-decoration: none;
 }
 .nav-card {
-  max-width: 330px;
+  max-width: 380px;
   width: 100%;
-  height: 260px;
+  height: 350px;
   border: 1px solid #656d82;
-  border-radius: 4px;
-  margin: 15px;
+  border-radius: 3px;
   cursor: pointer;
   box-sizing: border-box;
 
+  @media (max-width: 1230px) {
+    max-width: 700px;
+    width: 100%;
+    margin: 20px;
+  }
+
   &__content {
-    height: calc(260px - 10px);
+    height: calc(380px - 10px);
   }
 
   &:hover {
-    border: 5px solid $color-primary;
+    border: 3px solid $color-primary;
   }
 
   &__header {
-    font-size: $font-size-navcard;
+    font-size: 36px;
     font-weight: 500;
   }
 
   .illustration {
-    max-width: 100px;
+    max-width: 126px;
     width: 100%;
   }
 
   &__text {
-    font-size: $font-size-b;
-    width: 230px;
+    font-size: 25px;
+    max-width: 410px;
+    width: 100%;
     font-weight: 300;
     text-align: center;
   }

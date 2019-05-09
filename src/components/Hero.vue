@@ -1,26 +1,35 @@
 <template>
   <section class="hero">
-    <!-- smart websites, made easy -->
-    <div class="hero__cta">
-      <h1 class="margin-bottom">Pretty good websites</h1>
-      <p
-        class="hero__description margin-bottom"
-      >So called Javascript web apps. It's like a complete application you can visit as a website.</p>
-      <div class="hero__buttons margin-bottom">
-        <Btn color="secondary" buttonText="Get a Quote"/>
-      </div>
-      <p class="join-our-team">
-        Want to work remotely?
-        <span>Join our team</span>
-      </p>
+    <h1 class="intro-text">
+      have made
+      <b>websites</b> and
+      <b>apps</b> for gjensidige, freia, ruter, netlife design, improving lives, lyse ideer, good morning, skolesjakken, direktoratet for økonomistyring, direktoratet for byggkvalitet, integrerings- og mangfoldsdirektoratet
+      <b>and you?</b>
+    </h1>
+    <div class="nav-card-wrapper">
+      <NavCard
+        class="nav-card-wrapper__work"
+        header="Our work"
+        to="/our-work"
+        :image="heroNavigationWork"
+        text="See previous projects"
+      />
+      <NavCard
+        class="nav-card-wrapper__about"
+        header="About"
+        to="/"
+        :image="heroNavigationAbout"
+        text="Who we are and what we do"
+      />
+      <NavCard
+        class="nav-card-wrapper__chat"
+        header="Chat with us"
+        to="/"
+        :image="heroNavigationChat"
+        text="We are online"
+      />
     </div>
 
-    <!-- hero illustration -->
-    <img
-      class="hero__illustration"
-      :src="hero"
-      alt="illustration of a web developer lying on the beach, drinking from a coconut and developing a website"
-    >
     <!-- random leafs -->
     <Leaf/>
     <Footer/>
@@ -30,9 +39,10 @@
 <style lang="scss">
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 4rem;
+  padding-bottom: 100px;
 
   @media (max-width: $mobile) {
     flex-direction: column;
@@ -41,47 +51,29 @@
     margin: 1rem;
   }
 
-  &__cta {
+  .intro-text {
+    max-width: $size-nav-bar;
     width: 100%;
-    max-width: 400px;
-    margin-right: 5rem;
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 100px;
 
     @media (max-width: $mobile) {
-      margin-bottom: 5rem;
-      margin-right: 0;
-    }
-
-    h1 {
-      line-height: 1.2;
-    }
-
-    .join-our-team {
-      span {
-        font-weight: 600;
-        border-bottom: 2px solid $color-primary;
-        cursor: pointer;
-      }
+      font-size: 30px;
     }
   }
 
-  &__description {
-    max-width: $size-description-tags;
-  }
-
-  &__buttons {
+  .nav-card-wrapper {
     display: flex;
-    justify-content: center;
-
-    .btn {
-      &__secondary {
-        width: 100%;
-      }
-    }
-  }
-
-  &__illustration {
+    justify-content: space-between;
+    max-width: $size-nav-bar;
     width: 100%;
-    max-width: 670px;
+
+    @media (max-width: 1230px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .leaf {
@@ -93,16 +85,26 @@
 </style>
 
 <script>
-import hero from "@/assets/hero.svg";
+import NavCard from "@/components/NavCard";
 import Leaf from "@/components/Leaf";
 import Btn from "@/components/Btn";
 import Footer from "@/components/Footer";
 
+import heroNavigationWork from "@/assets/heroNavigationWork.svg";
+import heroNavigationAbout from "@/assets/heroNavigationAbout.svg";
+import heroNavigationChat from "@/assets/heroNavigationChat.svg";
+
 export default {
-  components: { Btn, Leaf, Footer },
+  components: { Btn, Leaf, Footer, NavCard },
   computed: {
-    hero() {
-      return hero;
+    heroNavigationWork() {
+      return heroNavigationWork;
+    },
+    heroNavigationAbout() {
+      return heroNavigationAbout;
+    },
+    heroNavigationChat() {
+      return heroNavigationChat;
     }
   }
 };

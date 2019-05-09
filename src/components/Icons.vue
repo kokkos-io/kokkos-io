@@ -1,39 +1,53 @@
 <template>
   <div class="icons">
-    <img class="icons__img icon-pic-size" :src="image">
-    <h4 class="icons__title">{{title}}</h4>
-    <p class="icons__text">{{text}}</p>
+    <router-link :to="to" class="icons__content">
+      <h4 class="icons__title">{{title}}</h4>
+      <img class="icons__img" :src="image">
+      <p class="icons__text">{{text}}</p>
+    </router-link>
   </div>
 </template>
 
 <style lang="scss">
-.icons {
+.icons,
+.icons__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: 1px solid white;
-  transition: border 1s;
+  justify-content: space-around;
+  text-decoration: none;
+}
 
-  p {
-    color: white;
-    transition: color 1s;
+.icons {
+  max-width: 512px;
+  width: 100%;
+  height: 270px;
+  border: 1px solid white;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &__content {
+    height: calc(270px - 10px);
   }
 
   &:hover {
-    border: 1px solid #fad078;
-
-    p {
-      color: $color-primary;
-    }
+    border: 5px solid $color-primary;
   }
 
-  margin: 35px;
-  width: 300px;
-  height: 300px;
+  &__header {
+    font-size: $font-size-navcard;
+    font-weight: 500;
+  }
 
-  p {
+  .img {
+    max-width: 80px;
+    width: 100%;
+  }
+
+  &__text {
+    font-size: $font-size-b;
+    width: 230px;
+    font-weight: 200;
     text-align: center;
   }
 }
@@ -41,6 +55,6 @@
 
 <script>
 export default {
-  props: ["image", "title", "text"]
+  props: ["image", "title", "text", "to"]
 };
 </script>
