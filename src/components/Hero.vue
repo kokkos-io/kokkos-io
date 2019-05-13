@@ -2,11 +2,11 @@
   <section class="hero">
     <!-- smart websites, made easy -->
     <div class="hero__cta">
-      <h1 class="mb-1">Pretty good websites</h1>
+      <h1 class="margin-bottom">Pretty good websites</h1>
       <p
-        class="hero__description mb-1"
+        class="hero__description margin-bottom"
       >So called Javascript web apps. It's like a complete application you can visit as a website.</p>
-      <div class="hero__buttons mb-1">
+      <div class="hero__buttons margin-bottom">
         <Btn color="secondary" buttonText="Get a Quote"/>
       </div>
       <p class="join-our-team">
@@ -23,6 +23,7 @@
     >
     <!-- random leafs -->
     <Leaf/>
+    <Footer/>
   </section>
 </template>
 
@@ -30,8 +31,8 @@
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  margin: 3rem;
+  justify-content: center;
+  margin: 4rem;
 
   @media (max-width: $mobile) {
     flex-direction: column;
@@ -43,9 +44,11 @@
   &__cta {
     width: 100%;
     max-width: 400px;
+    margin-right: 5rem;
 
     @media (max-width: $mobile) {
       margin-bottom: 5rem;
+      margin-right: 0;
     }
 
     h1 {
@@ -93,9 +96,10 @@
 import hero from "@/assets/hero.svg";
 import Leaf from "@/components/Leaf";
 import Btn from "@/components/Btn";
+import Footer from "@/components/Footer";
 
 export default {
-  components: { Btn, Leaf },
+  components: { Btn, Leaf, Footer },
   computed: {
     hero() {
       return hero;

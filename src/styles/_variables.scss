@@ -20,7 +20,6 @@ $font-size-b: 20px;
 $font-size-c: 36px;
 $font-size-d: 60px;
 
-
 // sizes: misc
 $size-nav-bar: 1250px;
 $size-description-tags: 300px;
@@ -29,4 +28,7 @@ $size-description-tags: 300px;
 $mobile: 760px;
 $desktop: 1024px;
 $desktop-xl: 1900px;
+
+// margin bottom (needs to be !important to overwrite vuetify)
+$margin-bottom: 1rem!important 
 

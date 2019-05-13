@@ -36,6 +36,7 @@ export default {
     top: 125px;
     left: -45px;
     width: 210px;
+    z-index: -1;
   }
 
   &__acacia2 {
@@ -43,6 +44,7 @@ export default {
     position: fixed;
     top: -100px;
     right: 40%;
+    z-index: -1;
   }
 
   &__rowan {
@@ -50,6 +52,7 @@ export default {
     position: fixed;
     top: -106px;
     right: 5px;
+    z-index: -1;
   }
 }
 </style>

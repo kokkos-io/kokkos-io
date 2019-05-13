@@ -1,45 +1,59 @@
 <template>
-  <nav>
-    <!-- logo -->
-    <div class="logo__wrapper ml-5">
-      <LogoKokkos class="logo__wrapper--kokkos" size="sm"/>
-      <h2>kokkos</h2>
-    </div>
+  <nav class="navbar">
+    <div class="nav">
+      <router-link to="/" class="logo__wrapper">
+        <LogoKokkos class="logo__wrapper--kokkos" size="sm"/>
+        <h2>kokkos</h2>
+      </router-link>
 
-    <!-- liste med linker -->
-    <div class="links">
-      <LinkNavBar linkStyle="no-underline" text="Our work" class="our-work ml-2"/>
-      <LinkNavBar linkStyle="no-underline" text="Contact" class="contact"/>
-      <LinkNavBar linkStyle="underline" text="Get a Quote" class="get-a-quote mr-2"/>
+      <!-- liste med linker -->
+      <div class="links">
+        <LinkNavBar to="/our-work" linkStyle="no-underline" text="Our work" class="our-work ml-2"/>
+        <LinkNavBar to="/contact" linkStyle="no-underline" text="Contact" class="contact"/>
+        <LinkNavBar
+          to="/get-a-quote"
+          linkStyle="underline"
+          text="Get a Quote"
+          class="get-a-quote mr-2"
+        />
+      </div>
+      <MobileNavbar class="mobile-navbar"/>
     </div>
-    <HamburgerNavbar class="hamburger-navbar"/>
   </nav>
 </template>
 
 <script>
 import LogoKokkos from "@/components/LogoKokkos";
 import LinkNavBar from "@/components/LinkNavBar";
-import HamburgerNavbar from "@/components/HamburgerNavbar";
+import MobileNavbar from "@/components/MobileNavbar";
 
 export default {
-  components: { LogoKokkos, LinkNavBar, HamburgerNavbar }
+  components: { LogoKokkos, LinkNavBar, MobileNavbar }
 };
 </script>
 
 <style lang="scss">
-nav {
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: $size-nav-bar;
+  width: 100%;
   margin: 1rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 
   @media (max-width: $mobile) {
     margin-bottom: 4rem;
   }
 
   .logo__wrapper {
+    text-decoration: none;
     @media (max-width: $mobile) {
       margin-left: 0;
     }
@@ -64,7 +78,7 @@ nav {
   }
 }
 
-.hamburger-navbar {
+.mobile-navbar {
   display: none;
 
   @media (max-width: $mobile) {
