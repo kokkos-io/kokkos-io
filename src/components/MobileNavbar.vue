@@ -123,6 +123,8 @@
     }
 
     .contact {
+      display: flex;
+      flex-direction: column;
       &__tobias {
         display: flex;
         flex-direction: column;

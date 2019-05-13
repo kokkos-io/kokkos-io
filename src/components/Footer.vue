@@ -2,9 +2,9 @@
   <section class="footer">
     <div class="footer-content">
       <div class="footer-content__first">
-        <p>Chat</p>
-        <p>hei@kokkos.io</p>
-        <p>944 84 500</p>
+        <LinkFooter :image="footerIconChat" text="chat"/>
+        <LinkFooter :image="footerIconEmail" text="hei@kokkos.io"/>
+        <LinkFooter :image="footerIconPhone" text="(+47) 944 84 500"/>
       </div>
       <div class="footer-content__second">
         <p>921208332, Fredensborgveien 24 D, 0177, Oslo, Norway</p>
@@ -15,7 +15,26 @@
 </template>
 
 <script>
-export default {};
+import footerIconChat from "@/assets/footerIconChat.svg";
+import footerIconEmail from "@/assets/footerIconEmail.svg";
+import footerIconPhone from "@/assets/footerIconPhone.svg";
+
+import LinkFooter from "@/components/LinkFooter.vue";
+
+export default {
+  components: { LinkFooter },
+  computed: {
+    footerIconChat() {
+      return footerIconChat;
+    },
+    footerIconEmail() {
+      return footerIconEmail;
+    },
+    footerIconPhone() {
+      return footerIconPhone;
+    }
+  }
+};
 </script>
 
 <style lang="scss">

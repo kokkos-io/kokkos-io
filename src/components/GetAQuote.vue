@@ -1,140 +1,69 @@
 <template>
-  <section class="quote">
-    <div class="quote__cta mb-4">
-      <h1>Get a quote</h1>
-      <p>Simply choose the service you need from the list below.</p>
-    </div>
-    <div class="wrapper">
-      <!-- <div
+  <section class="quote-wrapper">
+    <div class="quote">
+      <div class="quote__cta mb-4">
+        <h1>Quote</h1>
+        <h4>Within 24 hours</h4>
+        <p>Simply choose the service you need from the list below.</p>
+      </div>
+      <div class="wrapper">
+        <!-- <div
         class="typeform-widget"
         data-url="https://martine669524.typeform.com/to/IMlE6l"
         data-transparency="100"
         style="width: 100%; height: 500px;"
-      ></div>-->
+        ></div>-->
 
-      <Icons
-        @click.native="showModalDev = true"
-        :image="iconsWebDevelopment"
-        title="Web development"
-        text="Web ready websites"
-      />
+        <Icons
+          class="web-development"
+          to="/"
+          :image="iconsWebDevelopment"
+          title="Web development"
+          text="Web ready websites"
+        />
 
-      <v-dialog class="show-modal" v-model="showModalDev" max-width="800">
-        <div class="show-modal__window">
-          <div class="show-modal__window--left">
-            <img :src="iconsWebDevelopment">
-          </div>
-          <div class="show-modal__window--right">
-            <h4>Web Development</h4>
-            <h2>Web ready websites</h2>
-            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
-          </div>
-        </div>
-      </v-dialog>
+        <Icons
+          class="CMS"
+          to="/"
+          :image="iconsCMS"
+          title="CMS"
+          text="A custom-made content management system"
+        />
 
-      <Icons
-        @click.native="showModalCMS = true"
-        :image="iconsCMS"
-        title="CMS"
-        class="icon-CMS"
-        text="A custom-made content management system"
-      />
+        <Icons
+          class="integrations"
+          to="/"
+          :image="iconsIntegrations"
+          title="Integrations"
+          text="email / photos / chat ..."
+        />
 
-      <v-dialog class="show-modal" v-model="showModalCMS" max-width="800">
-        <div class="show-modal__window">
-          <div class="show-modal__window--left">
-            <img :src="iconsCMS">
-          </div>
-          <div class="show-modal__window--right">
-            <h4>CMS</h4>
-            <h2>A custom-made content management system</h2>
-            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
-          </div>
-        </div>
-      </v-dialog>
+        <Icons
+          class="web-design"
+          to="/"
+          :image="iconsWebDesign"
+          title="Web design"
+          text="Beautiful responsive websites"
+        />
 
-      <Icons
-        @click.native="showModalInteg = true"
-        :image="iconsIntegrations"
-        title="Integrations"
-        text="email / photos / chat ..."
-      />
+        <Icons
+          class="everything"
+          to="/"
+          :image="iconsEverything"
+          title="Everything"
+          text="Design, Code, Hosting, Integrations, cms"
+        />
 
-      <v-dialog class="show-modal" v-model="showModalInteg" max-width="800">
-        <div class="show-modal__window">
-          <div class="show-modal__window--left">
-            <img :src="iconsIntegrations">
-          </div>
-          <div class="show-modal__window--right">
-            <h4>Integrations</h4>
-            <h2>email / photos / chat ...</h2>
-            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
-          </div>
-        </div>
-      </v-dialog>
-
-      <Icons
-        @click.native="showModalDesign = true"
-        :image="iconsWebDesign"
-        title="Web design"
-        text="Beautiful responsive websites"
-      />
-
-      <v-dialog class="show-modal" v-model="showModalDesign" max-width="800">
-        <div class="show-modal__window">
-          <div class="show-modal__window--left">
-            <img :src="iconsWebDesign">
-          </div>
-          <div class="show-modal__window--right">
-            <h4>Web design</h4>
-            <h2>Beautiful responsive websites</h2>
-            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
-          </div>
-        </div>
-      </v-dialog>
-
-      <Icons
-        @click.native="showModalEver = true"
-        :image="iconsEverything"
-        title="Everything"
-        class="icon-everything"
-        text="Design, Code, Hosting, Integrations, cms"
-      />
-
-      <v-dialog class="show-modal" v-model="showModalEver" max-width="800">
-        <div class="show-modal__window">
-          <div class="show-modal__window--left">
-            <img :src="iconsEverything">
-          </div>
-          <div class="show-modal__window--right">
-            <h4>Everything</h4>
-            <h2>Design, code, hosting, integrations, cms</h2>
-            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
-          </div>
-        </div>
-      </v-dialog>
-
-      <Icons
-        @click.native="showModalDontKnow = true"
-        :image="iconsIDontKnow"
-        title="I´m not sure"
-        text="We´ll help guide you"
-      />
-
-      <v-dialog class="show-modal" v-model="showModalDontKnow" max-width="800">
-        <div class="show-modal__window">
-          <div class="show-modal__window--left">
-            <img :src="iconsIDontKnow">
-          </div>
-          <div class="show-modal__window--right">
-            <h4>I´m not sure</h4>
-            <h2>We´ll help guide you</h2>
-            <p>Lorem ipsum dolor sit amet, ne vel splendide interpretaris. Tantas laboramus ea cum, vix wisi propriae recusabo te. Sea probatus oportere eloquentiam ei, usu nobis denique persecuti id. Vim viderer nusquam neglegentur no, per adhuc eripuit efficiantur ei. Ius id meliore maiestatis, mei iudico placerat senserit eu.</p>
-          </div>
-        </div>
-      </v-dialog>
+        <Icons
+          class="dont-know"
+          to="/"
+          :image="iconsIDontKnow"
+          title="I´m not sure"
+          text="We´ll help guide you"
+        />
+      </div>
+      <Leaf/>
     </div>
-    <Leaf/>
   </section>
 </template>
 
@@ -151,43 +80,6 @@ import Icons from "@/components/Icons.vue";
 
 export default {
   components: { Leaf, Icons },
-
-  mounted() {
-    this.createTypeform();
-  },
-
-  data() {
-    return {
-      showModalDev: false,
-      showModalCMS: false,
-      showModalInteg: false,
-      showModalDesign: false,
-      showModalEver: false,
-      showModalDontKnow: false
-    };
-  },
-
-  methods: {
-    createTypeform() {
-      var qs,
-        js,
-        q,
-        s,
-        d = document,
-        gi = d.getElementById,
-        ce = d.createElement,
-        gt = d.getElementsByTagName,
-        id = "typef_orm",
-        b = "https://embed.typeform.com/";
-      if (!gi.call(d, id)) {
-        js = ce.call(d, "script");
-        js.id = id;
-        js.src = b + "embed.js";
-        q = gt.call(d, "script")[0];
-        q.parentNode.insertBefore(js, q);
-      }
-    }
-  },
 
   computed: {
     iconsWebDevelopment() {
@@ -213,24 +105,39 @@ export default {
 </script>
 
 <style lang="scss">
+.quote-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .quote {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
   margin: 3rem;
+  max-width: $size-nav-bar;
+  width: 100%;
 
   &__cta {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+
+    h1 {
+      font-size: 200px;
+    }
+
+    h4 {
+      font-size: 40px;
+    }
   }
 }
 
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   max-width: $desktop;
   width: 100%;
 
@@ -238,28 +145,71 @@ export default {
     justify-content: center;
   }
 
-  .show-modal {
-    &__window {
-      display: flex;
-      max-height: 800px;
-      background-color: white;
-      font-family: $font-stack;
+  .web-development {
+    border-right: 1px solid #656d82;
+    border-bottom: 1px solid #656d82;
 
-      &--left {
-        img {
-          padding: 20px;
-        }
-      }
+    &:hover {
+      border: 5px solid $color-primary;
+    }
 
-      &--right {
-      }
+    @media (max-width: 1122px) {
+      border: 1px solid white;
     }
   }
 
-  .icon-CMS,
-  .icon-everything {
-    img {
-      margin-top: 1rem;
+  .CMS {
+    border-bottom: 1px solid #656d82;
+
+    &:hover {
+      border: 5px solid $color-primary;
+    }
+
+    @media (max-width: 1122px) {
+      border: 1px solid white;
+    }
+  }
+
+  .integrations {
+    border-right: 1px solid #656d82;
+    border-bottom: 1px solid #656d82;
+
+    &:hover {
+      border: 5px solid $color-primary;
+    }
+
+    @media (max-width: 1122px) {
+      border: 1px solid white;
+    }
+  }
+
+  .web-design {
+    border-bottom: 1px solid #656d82;
+
+    &:hover {
+      border: 5px solid $color-primary;
+    }
+
+    @media (max-width: 1122px) {
+      border: 1px solid white;
+    }
+  }
+
+  .everything {
+    border-right: 1px solid #656d82;
+
+    &:hover {
+      border: 5px solid $color-primary;
+    }
+
+    @media (max-width: 1122px) {
+      border: 1px solid white;
+    }
+  }
+
+  .dont-know {
+    &:hover {
+      border: 5px solid $color-primary;
     }
   }
 }
