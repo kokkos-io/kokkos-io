@@ -30,23 +30,19 @@
       />
     </div>
 
-    <!-- hero illustration -->
-    <img
-      class="hero__illustration"
-      :src="hero"
-      alt="illustration of a web developer lying on the beach, drinking from a coconut and developing a website"
-    >
     <!-- random leafs -->
     <Leaf/>
+    <Footer/>
   </section>
 </template>
 
 <style lang="scss">
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  margin: 3rem;
+  justify-content: center;
+  padding-bottom: 100px;
 
   @media (max-width: $mobile) {
     flex-direction: column;
@@ -55,45 +51,29 @@
     margin: 1rem;
   }
 
-  &__cta {
+  .intro-text {
+    max-width: $size-nav-bar;
     width: 100%;
-    max-width: 400px;
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 100px;
 
     @media (max-width: $mobile) {
-      margin-bottom: 5rem;
-    }
-
-    h1 {
-      line-height: 1.2;
-    }
-
-    .join-our-team {
-      span {
-        font-weight: 600;
-        border-bottom: 2px solid $color-primary;
-        cursor: pointer;
-      }
+      font-size: 30px;
     }
   }
 
-  &__description {
-    max-width: $size-description-tags;
-  }
-
-  &__buttons {
+  .nav-card-wrapper {
     display: flex;
-    justify-content: center;
-
-    .btn {
-      &__secondary {
-        width: 100%;
-      }
-    }
-  }
-
-  &__illustration {
+    justify-content: space-between;
+    max-width: $size-nav-bar;
     width: 100%;
-    max-width: 670px;
+
+    @media (max-width: 1230px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .leaf {
@@ -105,15 +85,26 @@
 </style>
 
 <script>
-import hero from "@/assets/hero.svg";
+import NavCard from "@/components/NavCard";
 import Leaf from "@/components/Leaf";
 import Btn from "@/components/Btn";
+import Footer from "@/components/Footer";
+
+import heroNavigationWork from "@/assets/heroNavigationWork.svg";
+import heroNavigationAbout from "@/assets/heroNavigationAbout.svg";
+import heroNavigationChat from "@/assets/heroNavigationChat.svg";
 
 export default {
-  components: { Btn, Leaf },
+  components: { Btn, Leaf, Footer, NavCard },
   computed: {
-    hero() {
-      return hero;
+    heroNavigationWork() {
+      return heroNavigationWork;
+    },
+    heroNavigationAbout() {
+      return heroNavigationAbout;
+    },
+    heroNavigationChat() {
+      return heroNavigationChat;
     }
   }
 };

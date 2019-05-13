@@ -45,6 +45,8 @@ import Header from "@/components/Header";
 
 import gjensidigeLogo from "@/assets/gjensidige-logo2.svg";
 import freiaLogo from "@/assets/freia_logo.svg";
+import ruterLogo from "@/assets/ruter-logo.png";
+
 export default {
   components: {
     Leaf,
@@ -59,6 +61,9 @@ export default {
     },
     freiaLogo() {
       return freiaLogo;
+    },
+    ruterLogo() {
+      return ruterLogo;
     }
   }
 };

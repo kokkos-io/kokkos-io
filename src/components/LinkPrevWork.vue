@@ -16,8 +16,10 @@ export default {
 
 <style lang="scss">
 .box {
-  width: 550px;
-  height: 350px;
+  max-width: 550px;
+  width: 100%;
+  max-height: 350px;
+  height: 100%;
 }
 .image-box {
   max-width: 550px;
@@ -26,7 +28,7 @@ export default {
   height: 100%;
 }
 
-.places {
+.projects {
   display: flex;
   flex-direction: column;
   width: 100%;
