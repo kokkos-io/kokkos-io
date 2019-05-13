@@ -6,25 +6,12 @@
       <h2>kokkos</h2>
     </router-link>
 
-<<<<<<< Updated upstream
     <!-- liste med linker -->
     <div class="links">
-      <LinkNavBar to="/our-work" linkStyle="no-underline" text="Our work" class="our-work ml-2"/>
-      <LinkNavBar to="/contact" linkStyle="no-underline" text="Contact" class="contact"/>
-      <LinkNavBar
-        to="/get-a-quote"
-        linkStyle="underline"
-        text="Get a Quote"
-        class="get-a-quote mr-2"
-      />
-=======
-      <!-- liste med linker -->
-      <div class="links">
-        <p>Websites and Apps, with JavaScript</p>
-      </div>
-      <MobileNavbar class="mobile-navbar"/>
->>>>>>> Stashed changes
+      <p>Websites and Apps, with JavaScript</p>
     </div>
+    <MobileNavbar class="mobile-navbar"/>
+
     <HamburgerNavbar class="hamburger-navbar"/>
   </nav>
 </template>

@@ -1,44 +1,10 @@
 <template>
-<<<<<<< Updated upstream
-  <section class="work">
-    <div class="work__heading ma-2">
-      <h1>Work</h1>
-      <p>What we have previously done or are currently working on.</p>
-    </div>
-    <div class="wrapper">
-      <LinkPrevWork
-        :image="freiaLogo"
-        title="Freia"
-        text="blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal"
-      />
-      <LinkPrevWork
-        title="Ruter"
-        text="blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal"
-      />
-      <LinkPrevWork
-        title="Netlife"
-        text="blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal"
-      />
-      <LinkPrevWork
-        :image="gjensidigeLogo"
-        title="Gjensidige"
-        text="blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal
-          blablablalbalblalblablablalbalblalblablablalbalblalblablablalbalblal"
-=======
   <section class="previous-work">
     <div class="work">
       <Header
         title="Work"
         description="Previous projects"
         text="Some of what we have previously done or are currently working on."
->>>>>>> Stashed changes
       />
 
       <div class="wrapper">
@@ -79,10 +45,6 @@ import Header from "@/components/Header";
 
 import gjensidigeLogo from "@/assets/gjensidige-logo2.svg";
 import freiaLogo from "@/assets/freia_logo.svg";
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 export default {
   components: {
     Leaf,
@@ -112,10 +74,6 @@ export default {
   .work {
     max-width: $size-nav-bar;
     width: 100%;
-<<<<<<< Updated upstream
-    height: 100%;
-    flex-wrap: wrap;
-=======
     &__heading {
       display: flex;
       flex-direction: column;
@@ -169,7 +127,6 @@ export default {
       height: 100%;
       flex-wrap: wrap;
     }
->>>>>>> Stashed changes
   }
 }
 </style>

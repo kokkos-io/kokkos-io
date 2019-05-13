@@ -1,20 +1,5 @@
 <template>
   <section class="hero">
-<<<<<<< Updated upstream
-    <!-- smart websites, made easy -->
-    <div class="hero__cta">
-      <h1 class="mb-1">Pretty good websites</h1>
-      <p
-        class="hero__description mb-1"
-      >So called Javascript web apps. It's like a complete application you can visit as a website.</p>
-      <div class="hero__buttons mb-1">
-        <Btn color="secondary" buttonText="Get a Quote"/>
-      </div>
-      <p class="join-our-team">
-        Want to work remotely?
-        <span>Join our team</span>
-      </p>
-=======
     <h1 class="intro-text">
       have made
       <b>websites</b> and
@@ -43,7 +28,6 @@
         :image="heroNavigationChat"
         text="We are online"
       />
->>>>>>> Stashed changes
     </div>
 
     <!-- hero illustration -->
