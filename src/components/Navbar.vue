@@ -6,6 +6,7 @@
       <h2>kokkos</h2>
     </router-link>
 
+<<<<<<< Updated upstream
     <!-- liste med linker -->
     <div class="links">
       <LinkNavBar to="/our-work" linkStyle="no-underline" text="Our work" class="our-work ml-2"/>
@@ -16,6 +17,13 @@
         text="Get a Quote"
         class="get-a-quote mr-2"
       />
+=======
+      <!-- liste med linker -->
+      <div class="links">
+        <p>Websites and Apps, with JavaScript</p>
+      </div>
+      <MobileNavbar class="mobile-navbar"/>
+>>>>>>> Stashed changes
     </div>
     <HamburgerNavbar class="hamburger-navbar"/>
   </nav>
@@ -58,12 +66,15 @@ export default {
   }
 
   .links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 500px;
+    p {
+      font-size: 36px;
+      margin: 0;
+    }
 
+    @media (max-width: 1230px) {
+      width: 100%;
+      max-width: 330px;
+    }
     @media (max-width: $mobile) {
       display: none;
     }

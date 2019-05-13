@@ -1,5 +1,6 @@
 <template>
   <section class="hero">
+<<<<<<< Updated upstream
     <!-- smart websites, made easy -->
     <div class="hero__cta">
       <h1 class="mb-1">Pretty good websites</h1>
@@ -13,6 +14,36 @@
         Want to work remotely?
         <span>Join our team</span>
       </p>
+=======
+    <h1 class="intro-text">
+      have made
+      <b>websites</b> and
+      <b>apps</b> for gjensidige, freia, ruter, netlife design, improving lives, lyse ideer, good morning, skolesjakken, direktoratet for økonomistyring, direktoratet for byggkvalitet, integrerings- og mangfoldsdirektoratet
+      <b>and you?</b>
+    </h1>
+    <div class="nav-card-wrapper">
+      <NavCard
+        class="nav-card-wrapper__work"
+        header="Our work"
+        to="/our-work"
+        :image="heroNavigationWork"
+        text="See previous projects"
+      />
+      <NavCard
+        class="nav-card-wrapper__about"
+        header="About"
+        to="/contact"
+        :image="heroNavigationAbout"
+        text="Who we are and what we do"
+      />
+      <NavCard
+        class="nav-card-wrapper__chat"
+        header="Chat with us"
+        to="/"
+        :image="heroNavigationChat"
+        text="We are online"
+      />
+>>>>>>> Stashed changes
     </div>
 
     <!-- hero illustration -->
