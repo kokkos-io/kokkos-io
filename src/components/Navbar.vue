@@ -8,16 +8,11 @@
 
       <!-- liste med linker -->
       <div class="links">
-        <LinkNavBar to="/our-work" linkStyle="no-underline" text="Our work" class="our-work ml-2"/>
-        <LinkNavBar to="/contact" linkStyle="no-underline" text="Contact" class="contact"/>
-        <LinkNavBar
-          to="/get-a-quote"
-          linkStyle="underline"
-          text="Get a Quote"
-          class="get-a-quote mr-2"
-        />
+        <p>Websites and Apps, with JavaScript</p>
       </div>
       <MobileNavbar class="mobile-navbar"/>
+
+      <HamburgerNavbar class="hamburger-navbar"/>
     </div>
   </nav>
 </template>
@@ -71,12 +66,15 @@ export default {
   }
 
   .links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 500px;
+    p {
+      font-size: 36px;
+      margin: 0;
+    }
 
+    @media (max-width: 1230px) {
+      width: 100%;
+      max-width: 330px;
+    }
     @media (max-width: $mobile) {
       display: none;
     }

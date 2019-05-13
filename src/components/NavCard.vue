@@ -41,7 +41,7 @@ $nav-card-height: 260px;
   }
 
   &__content {
-    height: calc(380px - 10px);
+    height: calc(350px - 10px);
   }
 
   &:hover {

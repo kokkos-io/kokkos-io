@@ -17,7 +17,7 @@
       <NavCard
         class="nav-card-wrapper__about"
         header="About"
-        to="/"
+        to="/contact"
         :image="heroNavigationAbout"
         text="Who we are and what we do"
       />
