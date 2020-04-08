@@ -1,53 +1,253 @@
-  // All of this is connected to the font of the page
-  p, a, h1, h2, h3,h4, h5, ul, li, span, b, i {
-    font-family: $font-stack;
-    color: #4a536b;
+// the new fonts
+$font-main: "Cera-Pro-Bold";
+$font-secondary: "Dank-Mono";
+//the old fonts
+$font-main-bold: "OrdinaryTrial-Bold";
+$font-secondary: "Dank-Mono";
+
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+
+@mixin font-a {
+  font-family: $font-main;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: $primary;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin font-small {
+  font-family: $font-main;
+  font-size: 1.1rem;
+}
+
+@mixin font-p {
+  font-family: $font-secondary;
+  font-size: 1.8rem;
+  // margin-bottom: 10px;
+  line-height: 1.6em;
+  color: $primary;
+}
+
+@mixin font-label {
+  font-family: $font-main;
+  font-size: 1.1rem;
+  color: $primary;
+}
+
+@mixin font-span {
+  font-family: $font-main;
+  font-size: 1.6rem;
+}
+
+@mixin font-h1 {
+  font-family: $font-main;
+  font-size: 5.4rem;
+  color: $primary;
+}
+
+@mixin font-h2 {
+  font-family: $font-main;
+  font-size: 2.2rem;
+  color: $primary;
+}
+
+@mixin font-h3 {
+  font-family: $font-secondary;
+  font-size: 5rem;
+  //margin-bottom: 30px;
+}
+
+@mixin font-h4 {
+  font-family: $font-secondary;
+  font-weight: 400;
+  // text-transform: uppercase;
+  font-size: 4.1rem;
+}
+
+@mixin font-h5 {
+  font-family: $font-secondary;
+  font-weight: 400;
+  // text-transform: uppercase;
+  font-size: 2.8rem;
+}
+
+@mixin font-h6 {
+  font-family: $font-main;
+  font-weight: 400;
+  // text-transform: uppercase;
+  font-size: 2.4rem;
+}
+
+h1 {
+  @include font-h1;
+}
+
+h2 {
+  @include font-h2;
+}
+
+h3 {
+  @include font-h3;
+}
+
+h4 {
+  @include font-h4;
+}
+
+h5 {
+  @include font-h5;
+}
+
+h6 {
+  @include font-h6;
+}
+
+p {
+  @include font-p;
+}
+
+span {
+  @include font-span;
+}
+
+small {
+  @include font-small;
+}
+
+button {
+  @include font-small;
+
+  &.text {
+    @include font-a;
   }
 
-  body {
-    font-size: $font-size-a;
+  margin: 0;
+}
+
+a {
+  @include font-a;
+}
+
+legend {
+  @include font-h6;
+}
+
+label {
+  @include font-label;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.font-small {
+  @include font-small;
+}
+
+.font-p {
+  @include font-p;
+}
+
+.font-p-large {
+  font-size: 2rem;
+
+  @media (min-width: $md) {
+    font-size: 26.72px;
+  }
+}
+
+.font-small-smaller {
+  @include font-small;
+
+  @media (min-width: $md) {
+    font-size: 0.9rem;
+  }
+}
+
+.font-a {
+  @include font-a;
+}
+
+.font-span {
+  @include font-span;
+}
+
+.font-h1 {
+  @include font-h1;
+}
+
+.font-h2 {
+  @include font-h3;
+
+  @media (min-width: $md) {
+    @include font-h2;
+  }
+}
+
+.font-h3 {
+  @include font-h3;
+}
+
+.font-h4 {
+  @include font-h4;
+}
+
+.font-h5 {
+  @include font-h5;
+  width: 300px;
+  text-align: center;
+  padding-top: 8rem;
+
+  @media (min-width: $sm) {
+    width: 400px;
   }
 
-  h1, h2, h3, h4 {
-    font-weight: 700;
+  @media (min-width: $lg) {
+    width: 500px;
   }
+}
 
-  h1 {
-    font-size: $font-size-d;
-  }
+.font-h6 {
+  @include font-h6;
+  font-family: $font-secondary;
+}
 
-  h2 {
-    font-size: $font-size-c;
-  }
+.bold {
+  font-weight: bold;
+}
 
-  h3 {
-    font-size: $font-size-b;
-  }
+.display-block {
+  display: block;
+}
 
-  h4 {
-    font-size: $font-size-a;
-  }
+.underline {
+  text-decoration: underline;
+}
 
-  p {
-    font-weight: 300;
-  }
+.capitalize {
+  text-transform: capitalize;
+}
 
-  .light {
-    font-weight: 300;
-  }
+.text-center {
+  text-align: center;
+}
 
-  .semi-bold {
-    font-weight: 600;
-    font-size: $font-size-a;
-  }
+.font-main {
+  font-family: $font-main;
+}
 
-  .bold {
-    font-weight: 700;
-  }
+.font-main-bold {
+  font-family: $font-main-bold;
+}
 
-  .black {
-    font-weight: 900;
-  }
-
-
-  
+.font-secondary {
+  font-family: $font-secondary;
+}

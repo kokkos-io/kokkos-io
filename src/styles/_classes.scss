@@ -1,56 +1,213 @@
-// this is connected to the icons of the page
+// *******************************
+// NorwText and EngText components
+// *******************************
+// Styles for the header+image
 
-* {
-  margin: 0;
-  padding: 0;
-}
+.text-wrapper {
+  @apply flex flex-col justify-around items-center  px-10;
+  height: calc(100vh - 12px);
+  width: calc(100vw - 12px);
 
-.icon-pic-size {
-  max-height: 150px;
-  max-width: 190px;
-  height: 100%;
-  width: 100%;
-}
+  @media (max-width: 640px) {
+    justify-content: center;
+  }
 
-.border-radius {
-  border-radius: 3px;
-}
+  .header {
+    @apply flex flex-col justify-center items-center;
 
-// image-size for logo (LogoKokkos)
-.logo-horizontal {
-  &__img {
-    width: 90px;
-
-    &--xs {
-      width: 40px;
+    @media (max-width: 640px) {
+      padding-bottom: 10rem;
     }
 
-    &--sm {
-      width: 50px;
+    h2 {
+      @apply;
+    }
+  }
+
+  // style for text on page
+  .text {
+    @apply max-w-screen-sm;
+    p {
+      text-align: center;
     }
 
-    &--md {
-      width: 60px;
-    }
-
-    &--lg {
-      width: 90px;
-    }
-
-    &--xl {
-      width: 150px;
+    @media (max-width: 640px) {
+      padding-bottom: 6rem;
     }
   }
 }
-// this is styling of the logo (LogoKokkos)
-.logo {
-  &__wrapper {
-    display: flex;
-    align-items: center;
-    color: $color-primary;
 
-    &--kokkos {
-      margin-right: 0.3rem;
-    }
+.contact {
+  display: flex;
+  align-items: baseline;
+
+  .chat-link {
+    padding-right: 1rem;
+    @apply cursor-pointer;
+    font-family: $font-secondary;
+    font-size: 1.8rem;
+    text-decoration: underline;
+  }
+  p {
+    padding-right: 1rem;
+  }
+
+  a {
+    @apply cursor-pointer;
+    font-family: $font-secondary;
+    font-size: 1.8rem;
+    text-decoration: underline;
+  }
+}
+
+.tilt {
+  transform: rotate(-2deg);
+}
+
+// *********************
+// PopperPopup component
+// *********************
+
+.gradient {
+  background: linear-gradient(
+    0.25turn,
+    rgba(244, 124, 111, 0.35),
+    rgba(254, 239, 123, 0.35)
+  );
+  @apply rounded py-0 px-1 cursor-pointer;
+  font-family: $font-secondary;
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+button {
+  @apply py-0 px-1 cursor-pointer;
+  font-family: $font-secondary;
+  font-size: 1.8rem;
+  text-decoration: underline;
+}
+
+.pop-up {
+  @apply rounded-md p-2 mx-3 max-w-md w-full;
+  background-color: $secondary;
+  border: 3px solid $primary;
+  z-index: 1;
+  color: $primary;
+  font-family: $font-secondary;
+
+  @media (min-width: 768px) {
+    @apply max-w-lg;
+  }
+}
+
+#tooltip {
+  /* ... */
+  display: none;
+}
+
+#tooltip[data-show] {
+  display: block;
+  z-index: 1;
+}
+
+// ********************
+// ToggleLang component
+// ********************
+
+.toggle-lang {
+  @apply absolute left-0 top-0 pl-16 pt-16;
+  position: absolute;
+  // left: 60px;
+  // top: 60px;
+  font-size: 18px;
+  color: $primary;
+
+  @media (max-width: 450px) {
+    left: 30px;
+    top: 30px;
+    padding: 0;
+  }
+}
+input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+label {
+  display: inline-block;
+  opacity: 0.7;
+}
+
+input[type="radio"]:checked + label {
+  opacity: 1;
+}
+
+.divider {
+  opacity: 0.7;
+  font-family: $font-main;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.content-wrapper {
+  @apply w-full flex flex-col justify-center items-center;
+  background-color: $secondary;
+}
+
+.toggle-color {
+  position: absolute;
+  right: 60px;
+  top: 60px;
+  color: $primary;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  outline: none;
+
+  @media (max-width: 450px) {
+    right: 30px;
+    top: 30px;
+    padding: 0;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+.color-button {
+  padding: 0;
+}
+
+.color {
+  color: $secondary;
+}
+
+.backgroundColor {
+  background-color: $primary;
+}
+
+.image {
+  padding-top: 2rem;
+}
+
+// ****************
+// Layout component
+// ****************
+
+body {
+  @apply flex justify-center items-center w-full h-full relative overflow-hidden;
+  background-color: $primary;
+
+  .border-container {
+    @apply flex justify-center rounded-md overflow-y-auto;
+    background-color: $secondary;
+    height: calc(100% - 12px);
+    width: calc(100% - 12px);
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    margin: 6px 6px 24px;
   }
 }

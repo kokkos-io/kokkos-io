@@ -1,0 +1,32 @@
+// The correct fonts
+@font-face {
+  font-family: "Cera-Pro-Bold";
+  src: url("~@/assets/fonts/Cera-Pro-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Dank-Mono";
+  src: url("~@/assets/fonts/DankMono-Regular.otf") format("opentype");
+}
+
+// The old fonts
+// @font-face {
+//   font-family: "Domaine-Regular";
+//   src: url("../fonts/DomaineDisplayTest-Regular.otf") format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "OrdinaryTrial-Regular";
+//   src: url("../fonts/OrdinaryTrial-TextRegular.otf") format("opentype");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "OrdinaryTrial-Bold";
+//   src: url("../fonts/OrdinaryTrial-TextBold.otf") format("opentype");
+//   font-weight: bold;
+//   font-style: normal;
+// }

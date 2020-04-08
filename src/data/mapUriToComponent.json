@@ -1,0 +1,23 @@
+{
+  "__home__": "./src/pages/Index.vue",
+  "front-page": "./src/pages/Index.vue",
+  "about": "./src/pages/About.vue",
+  "contact": "./src/pages/Contact.vue",
+  "references": "./src/pages/References.vue",
+  "stories": "./src/pages/Stories.vue",
+  "story": "./src/pages/StoriesStory.vue",
+  "private": "./src/pages/Private.vue",
+  "privateProduct": "./src/pages/PrivateProduct.vue",
+  "corporate": "./src/pages/Corporate.vue",
+  "corporateProduct": "./src/pages/CorporateProduct.vue",
+
+  "om-oss": "./src/pages/About.vue",
+  "kontakt": "./src/pages/Contact.vue",
+  "referanser": "./src/pages/References.vue",
+  "historier": "./src/pages/Stories.vue",
+  "historie": "./src/pages/StoriesStory.vue",
+  "privat": "./src/pages/Private.vue",
+  "privatProdukt": "./src/pages/PrivateProduct.vue",
+  "bedrift": "./src/pages/Corporate.vue",
+  "bedriftProdukt": "./src/pages/CorporateProduct.vue"
+}

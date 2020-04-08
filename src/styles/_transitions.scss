@@ -1,0 +1,43 @@
+.trans-left {
+  position: relative;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  &--active {
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+      opacity 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    opacity: 1;
+
+    @for $i from 0 through 25 {
+      &:nth-child(#{$i}) {
+        transform: translate3d(8px, 3px, 0);
+
+        // don't wait to transition the first element
+        @if $i == 0 {
+        }
+
+        // transition one after another by delaying more for each one
+        @else {
+          transition-delay: calc(80ms * #{$i});
+        }
+      }
+    }
+  }
+}
+
+.fade-in-early.visible,
+.fade-in.visible {
+  opacity: 1;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.fade-in,
+.fade-in-early {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 25px, 0);
+  transform: translate3d(0, 25px, 0);
+  will-change: opacity, transform;
+  transition: opacity 1s, -webkit-transform 1s ease-out;
+  transition: opacity 1s, transform 1s ease-out;
+  transition: opacity 1s, transform 1s ease-out, -webkit-transform 1s ease-out;
+}

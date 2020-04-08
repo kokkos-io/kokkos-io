@@ -1,0 +1,17 @@
+img {
+  border-radius: 3px;
+  animation: image-load 0.3s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes image-load {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  100% {
+    opacity: 1;
+    filter: alpha(opacity=1);
+  }
+}

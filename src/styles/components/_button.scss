@@ -1,0 +1,20 @@
+.btn {
+  color: $primary;
+  background-color: $secondary;
+  border-width: 0px;
+  padding: 20px;
+
+  &__secondary {
+    background-color: $primary;
+    color: $secondary;
+  }
+
+  &__wide {
+    width: 100%;
+  }
+
+  &[disabled] {
+    background-color: #aaa;
+    color: #555;
+  }
+}

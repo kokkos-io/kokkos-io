@@ -1,18 +1,2 @@
-
-
-.background {
-  color: white;
-}
-
-.border {
-  border: 1px solid $color-text-0;
-
-  &__primary {
-    border-color: $color-primary;
-  }
-
-  &__secondary {
-    border-color: $color-secondary;
-  }
-
-}
+$primary: rgb(38, 48, 74);
+$secondary: rgb(255, 255, 255);

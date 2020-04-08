@@ -1,9 +1,10 @@
+@import "colors";
+@import "font-import";
+@import "fonts";
 
-// variables
-@import 'variables';
-@import 'sass-meister';
+@import "base";
+@import "classes";
+@import "frame-sizes";
 
-// usage
-@import 'fonts';
-@import 'colors';
-@import 'classes';
+@import "components/button";
+@import "components/image";

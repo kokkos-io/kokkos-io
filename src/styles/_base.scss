@@ -1,0 +1,36 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  border: 0;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: black;
+  background: #eaca6f;
+}
+
+::selection {
+  color: black;
+  background: #eaca6f;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media (min-width: $sm) {
+    font-size: 83.5%;
+  }
+
+  @media (min-width: $lg) {
+    font-size: 100%;
+  }
+}
+
+// #app {
+//   min-height: 100vh;
+//   height: 100%;
+// }
