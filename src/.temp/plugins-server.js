@@ -1,4 +1,4 @@
-import plugin_gridsome_plugin_tailwindcss_7 from "/Users/martine/WEB/PROSJEKTER/kokkos-gridsome/node_modules/gridsome-plugin-tailwindcss/gridsome.client.js"
+import plugin_gridsome_plugin_tailwindcss_7 from "/Users/martine/WEB/PROSJEKTER/midlertidig/kokkos-io/node_modules/gridsome-plugin-tailwindcss/gridsome.client.js"
 
 export default [
   {
